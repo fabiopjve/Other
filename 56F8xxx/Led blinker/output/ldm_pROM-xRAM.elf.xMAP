@@ -1,0 +1,108 @@
+# Link map of Finit_MC56F801x_
+
+
+
+# .interrupt_code
+  00000000 0000005C interrupt_vectors.text F@DummyFn2	(MC56F801x_vector.asm)
+  00000000 00000000 interrupt_vectors.text FMC56F801x_intVec	(MC56F801x_vector.asm)
+  00000000 0000005C interrupt_vectors.text interrupt_vectors.text	(MC56F801x_vector.asm)
+
+# .executing_code
+  0000005C 00000056 startup.text Finit_MC56F801x_	(MC56F801x_init.asm)
+  0000005C 00000056 startup.text startup.text	(MC56F801x_init.asm)
+  000000B2 00000019 utility.text F__romCopy	(DSP56800E_promxram.asm)
+  000000B2 00000019 utility.text utility.text	(DSP56800E_promxram.asm)
+  000000CB 0000000E utility.text F__zeroBSS	(DSP56800E_zeroBSS.asm)
+  000000CB 0000000E utility.text utility.text	(DSP56800E_zeroBSS.asm)
+  000000D9 00000011 utility.text F__trim	(MC56F801x_trim.asm)
+  000000D9 00000011 utility.text utility.text	(MC56F801x_trim.asm)
+  000000EA 00000014 interrupt_routines.text F@DummyFn1	(MC56F801x_vector.asm)
+  000000EA 00000000 interrupt_routines.text MC56F801x_intRoutine	(MC56F801x_vector.asm)
+  000000EA 00000014 interrupt_routines.text interrupt_routines.text	(MC56F801x_vector.asm)
+  000000EE 00000000 interrupt_routines.text MC56F801x_illegal	(MC56F801x_vector.asm)
+  000000F2 00000000 interrupt_routines.text MC56F801x_HWSOverflow	(MC56F801x_vector.asm)
+  000000F6 00000000 interrupt_routines.text MC56F801x_misalign	(MC56F801x_vector.asm)
+  000000FA 00000000 interrupt_routines.text MC56F801x_PLL	(MC56F801x_vector.asm)
+  000000FE 00000009 rtlib.text Fexit_halt	(runtime 56800E smm.lib exit_dsp.o     )
+  000000FE 00000009 rtlib.text rtlib.text	(runtime 56800E smm.lib exit_dsp.o     )
+  00000107 0000006C rtlib.text rtlib.text	(runtime 56800E smm.lib hostio_asm.o   )
+  00000107 00000001 rtlib.text Fexit_hsst_hostio	(runtime 56800E smm.lib hostio_asm.o   )
+  00000108 0000000B rtlib.text F__debugger_file_write	(runtime 56800E smm.lib hostio_asm.o   )
+  00000113 00000012 rtlib.text F__debugger_con_write	(runtime 56800E smm.lib hostio_asm.o   )
+  00000125 0000000A rtlib.text F__debugger_open	(runtime 56800E smm.lib hostio_asm.o   )
+  0000012F 0000000A rtlib.text F__debugger_close	(runtime 56800E smm.lib hostio_asm.o   )
+  00000139 0000000C rtlib.text F__debugger_seek	(runtime 56800E smm.lib hostio_asm.o   )
+  00000145 0000000A rtlib.text F__debugger_read	(runtime 56800E smm.lib hostio_asm.o   )
+  0000014F 0000001A rtlib.text F__put_char_dbg_console	(runtime 56800E smm.lib hostio_asm.o   )
+  00000169 0000000A rtlib.text F__flush_console	(runtime 56800E smm.lib hostio_asm.o   )
+  00000173 00000030 rtlib.text rtlib.text	(runtime 56800E smm.lib console_asm.o  )
+  00000173 0000000F rtlib.text F__console_write	(runtime 56800E smm.lib console_asm.o  )
+  00000182 0000000A rtlib.text Ffflush_console	(runtime 56800E smm.lib console_asm.o  )
+  0000018C 00000017 rtlib.text F__dbg_put_char	(runtime 56800E smm.lib console_asm.o  )
+  000001A3 0000000C .text   Fdelay	(main.c)
+  000001AF 00000031 .text   Fmain	(main.c)
+  000001E0 0000001F .text   F__flush_all	(MSL C 56800E smm.lib ansi_files.o   )
+  000001FF 00000001 .text   F__convert_from_newlines	(MSL C 56800E smm.lib buffer_io.o    )
+  00000200 00000025 .text   F__prep_buffer	(MSL C 56800E smm.lib buffer_io.o    )
+  00000225 00000055 .text   F__flush_buffer	(MSL C 56800E smm.lib buffer_io.o    )
+  0000027A 0000007F .text   Ffflush	(MSL C 56800E smm.lib file_io.o      )
+  000002F9 0000004D .text   F_ftell	(MSL C 56800E smm.lib file_pos.o     )
+  00000346 00000023 .text   Fftell	(MSL C 56800E smm.lib file_pos.o     )
+  00000369 0000003E .text   F__write_file	(MSL C 56800E smm.lib hostio.o       )
+  000003A7 00000010 .text   F__close_file	(MSL C 56800E smm.lib hostio.o       )
+  000003B7 00000034 .text   F__read_file	(MSL C 56800E smm.lib hostio.o       )
+#>000003EB          __pROM_data_start (linker command file)
+
+# .data_in_p_flash_ROM
+#>00000000          __xRAM_data_start (linker command file)
+  00000002 00000088 .data   F__files	(MSL C 56800E smm.lib ansi_files.o   )
+  0000008A 00000002 rtlib.data rtlib.data	(runtime 56800E smm.lib hostio_asm.o   )
+  0000008C 00000001 rtlib.data rtlib.data	(runtime 56800E smm.lib console_asm.o  )
+#>0000008E          __xRAM_data_end (linker command file)
+#>0000008E          __data_size (linker command file)
+
+# .data
+  0000008E 00000100 rtlib.bss.lo rtlib.bss.lo	(runtime 56800E smm.lib hostio_asm.o   )
+  0000018E 000000A0 rtlib.bss.lo rtlib.bss.lo	(runtime 56800E smm.lib console_asm.o  )
+#>0000022E          __bss_addr (linker command file)
+  0000022E 00000080 .bss    Fstderr_buff	(MSL C 56800E smm.lib ansi_files.o   )
+  000002AE 00000080 .bss    Fstdout_buff	(MSL C 56800E smm.lib ansi_files.o   )
+  0000032E 00000080 .bss    Fstdin_buff	(MSL C 56800E smm.lib ansi_files.o   )
+  000003AE 00000001 .bss    Ferrno	(MSL C 56800E smm.lib errno.o        )
+  000003AF 00000001 .bss    F__dbg_io_ready	(MSL C 56800E smm.lib hostio.o       )
+  000003B0 00000001 .bss    FtxtbinFlag	(MSL C 56800E smm.lib hostio.o       )
+  000003B1 00000001 .bss    FsavedTxtBinFlag	(MSL C 56800E smm.lib hostio.o       )
+#>000003B2          __bss_end (linker command file)
+#>00000184          __bss_size (linker command file)
+#>000003B4          __heap_addr (linker command file)
+#>00000100          __heap_size (linker command file)
+#>000004B4          __heap_end (linker command file)
+#>00000200          _min_stack_size (linker command file)
+#>000004B4          _stack_addr (linker command file)
+#>000004B6          _stack_addr (linker command file)
+#>000006B6          _stack_end (linker command file)
+#>000003B4          F_heap_addr (linker command file)
+#>000004B4          F_heap_end (linker command file)
+#>000004B6          F_Lstack_addr (linker command file)
+#>0000008E          F_Ldata_size (linker command file)
+#>00000000          F_Ldata_RAM_addr (linker command file)
+#>000003EB          F_Ldata_ROM_addr (linker command file)
+#>00000000          F_xROM_to_xRAM (linker command file)
+#>00000001          F_pROM_to_xRAM (linker command file)
+#>0000022E          F_Lbss_addr (linker command file)
+#>00000184          F_Lbss_size (linker command file)
+
+
+# Memory map:
+  v_addr   p_addr   size     name
+  00000000 00000000 0000005C .p_interrupts_ROM
+  0000005C 0000005C 0000038F .p_flash_ROM
+  000003EB 00000000 0000008E .p_flash_ROM_data
+  00000000 00000000 000006B6 .x_internal_RAM
+  00000800 00000800 0000E800 .reserved_1
+  0000F000 0000F000 00001000 .x_onchip_peripherals
+  00010000 00010000 00FEFF00 .reserved_2
+  00FFFF00 00FFFF00 00000000 .x_EOnCE
+
+# Link start time: Thu Aug 31 14:23:23 2006
+# Link end time: Thu Aug 31 14:23:25 2006
